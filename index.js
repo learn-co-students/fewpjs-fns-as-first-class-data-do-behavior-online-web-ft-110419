@@ -9,3 +9,23 @@ function handleClick(e) {
 
 /* Write your implementation of greet() */
 /* Write your implementation of displayMessage() */
+
+  function greet(stringTime) {
+    const num = parseInt(stringTime.split(":")[0]);
+    let textvalue; 
+      if (num < 12) {
+         textvalue = "Good Morning"
+      }else if (num > 12 && num < 17){
+          textvalue = "Good Afternoon"
+      }else {
+        
+          textvalue = "Good Evening"
+      }
+    return textvalue
+  }
+  
+  function displayMessage(string) {
+    let gretting = document.querySelector('h1#greeting');
+    gretting.innerText = string;
+  }
+  
